@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Selectors</title>
+</head>
+<body>
+    <p>Name</p>
+    <input type="text" id="t1">
+    <p>Password</p>
+    <input type="password"  id="p1">
+    <p>Gender</p>
+    <input type="radio" id="r1">Male
+    <input type="radio" id="r2">Female
+    <p>Value</p>
+    <input type="checkbox" id="c1" value="19">
+    <input type="checkbox" id="c2" value="20">
+    <p>Select</p>
+    <select  id="fruits"> 
+        <option value="apple">Apple</option>
+        <option value="grapes">Grapes</option>
+        <option value="orange">Orange</option>
+    </select>
+    <br>
+    <button id="btn">Submit</button>
+<script src="./jquery.js"></script>
+<script>
+    // $("#t1").bind("mouseenter",function(){
+    //     console.log("Touched!")
+    // });
+
+    // $("#t1").on({
+    //     mouseenter:function(){
+    //         console.log("Touched");
+    //     },
+    //     mouseleave:function(){
+    //         console.log("Leave");
+    //     }
+    // });
+
+    $("#t1").on("click mouseenter mouseleave",function(event){
+        console.log(event.type);
+        console.log(event.which);
+        console.log(event.target);
+
+    });
+
+    $("#p1").on("click",function(){
+        console.log("triggred");
+        $("#t1").trigger("click");
+    });
+
+    $("#btn").click(function(){
+        valid = true;
+        $("input:radio[id=r1]").prop("checked",true);
+        $("#fruits").val("orange");
+        if($("#t1").val() == ""){
+            alert("Enter your name");
+            valid = false;
+        }
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifying Attribute</title>
+</head>
+<body>
+    <a href="http://www.google.com" id="goo" target="blank">Google</a>
+    <!-- <a href="http://www.youtube.com" target="change">Youtube</a> -->
+    <div id="plain">
+
+    </div>
+    <button>Check</button>
+<script src="./jquery.js"></script>
+<script>
+$("button").click(function(){
+    // var tworesults =$("a").prop("target");
+    // $("a").attr("target","urrrr");
+    // console.log(tworesults);
+    $("#goo").clone().insertAfter("#plain");
+
+});
+</script>
+</body>
+</html>

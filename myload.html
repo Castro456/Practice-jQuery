@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading</title>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"
+  ></script>
+</head>
+<body>
+   <button class="button">Load</button> 
+   <div class="result"></div>
+   <script>
+    $(document).ready(function() {
+        $(".button").on("click", function() {
+          $(".button").attr("disabled", true);
+          $(".button").text("Fetching Data From Server...");
+
+          $.get("https://jsonplaceholder.typicode.com/posts", function(data) {
+            $(".result").html(JSON.stringify(data));
+            // $(".loading-icon").addClass("hide");
+            $(".button").attr("disabled", false);
+            $(".button").text("Fetch Data From Server");
+          });
+        });
+    });
+  </script>
+</body>
+</html>

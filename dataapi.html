@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data API</title>
+</head>
+<body>
+    <button id="send">Send</button>
+    <button id="rece">Display</button>
+    <div id="display">
+     <p>Will be Gone</p>
+    </div>
+<script src="./jquery.js"></script>
+<script>
+$("#send").click(function(){
+    $("#display").data({"items":"Apple"});
+});
+$("#rece").click(function(){
+    console.log($("#display").data("items"));
+});
+
+</script> 
+</body>
+</html>

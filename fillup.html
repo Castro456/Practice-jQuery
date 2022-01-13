@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill Ups</title>
+</head>
+<body>
+    <div id="container">
+        <p>Fill in the Blanks</p>
+        <input type="text" id="fillans">
+        <button>Submit</button>
+        <p id="result"></p>
+        <p id="answer"></p>
+    </div>
+<script src="./jquery.js"></script>
+<script>
+    $("button").click(function(){
+        var check = $("#fillans").val();
+        if(check == "castro")
+        {
+            $("#answer").text("Your answer is correct");
+        }
+        else{
+            $("#result").text("Wrong Answer");
+            $("#answer").html("<span style='color:red'>Castro is the Answer");
+        }
+    });
+</script>
+</body>
+</html>

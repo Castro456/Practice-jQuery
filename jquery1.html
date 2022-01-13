@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <div id="display">
+
+
+    </div>
+    <a href="http://www.google.com" target="blank">Google</a>
+    <a href="http://www.youtube.com" target="change">Youtube</a>
+    <ul id="item1">
+        <li><a href="http://yahoo.com">Yahoo</a></li>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+      </ul>
+      <button>Change</button>
+<style>
+    #display
+    {
+        font-style: italic;
+    }
+</style>
+<script src="./jquery.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#display').text('Webpage').css('color','green').fadeIn("slow");
+        console.log("Working Started");
+        $('h1').text("Goodbye");
+        $("a[target='change']").css("color","red");
+        $("a[href='http://www.google.com']").text("google.com");
+        // $("#item1 > li:last").css("color","pink");
+
+    });
+    $("button").click(function(){
+        $("#item1").find("li").css("color","red");
+         
+    });
+
+    // $(document).ready(function(){
+    //     $("#item1").text();
+    //     $("#ul#item1").text();
+    //     $("#ul").text();
+    //     console.log($("#ul"));
+    // });
+</script>
+</body>
+</html>

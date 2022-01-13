@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Each Loop</title>
+</head>
+<body> 
+    <!-- <ul id="item1">
+    <li><a href="http://yahoo.com">Yahoo</a></li>
+    <li class="ll">Coffee</li>
+    <li class="ll">Tea</li>
+    <li>Milk</li>
+  </ul> -->
+
+  <ul>
+    <li class="ll">Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+  </ul>
+
+<style>
+ .list{
+     font-style: italic;
+ }
+</style>
+<script src="./jquery.js"></script>
+<script>
+    $("li").each(function(index,element){
+        console.log($(element).text());
+    });
+    var loo = [56,24,34,46];
+    $.each(loo, function(index,value){
+        console.log(index,value);
+    });
+    //$("li").eq(2).toggleClass("list")
+    // $("li").filter(".ll").toggleClass("list")
+    $("li").not(".ll").css("background-color","lightblue");
+</script>   
+</body>
+</html>

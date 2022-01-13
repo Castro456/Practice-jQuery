@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add and Remove DOM Elements</title>
+</head>
+<body>
+        <div class="addelement after"></div>
+<style>
+    .addelement{
+        width: 200px;
+        height: 200px;
+        border-radius: 1px solid black;
+        margin: 2px;
+    }
+    .after{
+        background-color: red;
+    }
+    .result{
+        background-color: yellow;
+    }
+
+</style>
+<script src="./jquery.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".after").click(function(){
+        $(".after").after("<div class=' addelement result'>Attached"); //use after,before,append,prepared,remove
+    });
+    });
+
+</script>
+</body>
+</html>
